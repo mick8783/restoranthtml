@@ -3,12 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Buyer US Currency - Professional buyers of rare U.S. paper money, fancy serial numbers, and collections. Get free cash offers within 24 hours." />
+    <meta name="keywords" content="rare currency, US paper money, fancy serial numbers, currency buyer, collectible money" />
+    <meta name="author" content="Buyer US Currency" />
+    <meta property="og:title" content="Buyer US Currency - We Buy Rare Notes & Collections" />
+    <meta property="og:description" content="Get free cash offers for your rare U.S. paper money within 24 hours. Professional buyers of fancy serial numbers and collections." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://buyeruscurrency.com" />
     <title>Buyer US Currency - We Buy Rare Notes & Collections</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   </head>
   <body>
+    <!-- Loading Animation -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-content">
+        <div class="loading-logo">
+          <img src="./assets/images/img_freepik_horizo.png" alt="Loading..." />
+        </div>
+        <div class="loading-spinner"></div>
+        <p>Loading...</p>
+      </div>
+    </div>
+
     <div class="container">
       <!-- Header -->
       <header class="header">
@@ -22,13 +43,13 @@
           <div class="header-center">
              <img
               src="./assets/images/img_freepik_horizo.png"
-              alt="Logo"
+              alt="Buyer US Currency Logo"
               class="logo-img"
             />
           </div>
           <div class="header-right">
        
-            <button class="free-offer-btn" onclick="scrollToContactForm()">Free Cash Offer</button>
+            <button class="free-offer-btn" onclick="scrollToContactForm()" aria-label="Get Free Cash Offer">Free Cash Offer</button>
           </div>
         </div>
       </header>
@@ -39,18 +60,15 @@
         <section class="hero-section">
           <div class="hero-content">
             <div class="hero-decorative">
-              <!-- <div class="hero-accent"></div> -->
               <h1 class="hero-title">
                 <span class="hero-title-span"> WE BUY </span> U.S. PAPER MONEY – <span class="hero-title-span"> WE BUY </span> RARE NOTES – <span class="hero-title-span"> WE BUY </span> COLLECTIONS
               </h1>
-              <!-- <div class="hero-accent"></div>
-              <div class="hero-accent"></div> -->
             </div>
             <p class="hero-subtitle">
               From fancy serial numbers to full packs — get a free cash offer in
               just 24 hours.
             </p>
-            <button class="submit-offer-btn" onclick="scrollToContactForm()">Submit Offer</button>
+            <button class="submit-offer-btn" onclick="scrollToContactForm()" aria-label="Submit Your Offer">Submit Offer</button>
           </div>
         </section>
 
@@ -60,10 +78,10 @@
             <div class="contact-row">
               <img
                 src="./assets/images/img_frame.svg"
-                alt="Phone"
+                alt="Phone Icon"
                 class="contact-icon"
               />
-              <a href="tel:307-221-3006" class="contact-text">307-221-3006</a>
+              <a href="tel:307-221-3006" class="contact-text" aria-label="Call us at 307-221-3006">307-221-3006</a>
             </div>
             <div class="contact-line"></div>
           </div>
@@ -71,10 +89,10 @@
             <div class="contact-row">
               <img
                 src="./assets/images/img_fi_11502370.svg"
-                alt="Email"
+                alt="Email Icon"
                 class="contact-icon"
               />
-              <a href="mailto:don@buyeruscurrency.com" class="contact-text">don@buyeruscurrency.com</a>
+              <a href="mailto:don@buyeruscurrency.com" class="contact-text" aria-label="Email us at don@buyeruscurrency.com">don@buyeruscurrency.com</a>
             </div>
             <div class="contact-line"></div>
           </div>
@@ -85,18 +103,21 @@
       <div class="money-section">
         <img
           src="./assets/images/img_close_up_dollar_banknote.png"
-          alt="Dollar Banknote"
+          alt="Close-up of Dollar Banknote"
           class="money-main"
+          loading="lazy"
         />
         <img
           src="./assets/images/img_freepik_background_11488_216x618.png"
-          alt="Background"
+          alt="Background Decoration"
           class="money-bg-left"
+          loading="lazy"
         />
         <img
           src="./assets/images/img_freepik_background_11488.png"
-          alt="Background"
+          alt="Background Decoration"
           class="money-bg-right"
+          loading="lazy"
         />
       </div>
 
@@ -107,11 +128,11 @@
           The <span style="text-transform: uppercase">RareNote Advantage</span>
         </h2>
         <div class="advantage-cards">
-          <div class="advantage-card">
+          <div class="advantage-card" data-aos="fade-up" data-aos-delay="100">
             <div class="card-icon">
               <img
                 src="./assets/images/img_dollar_sign_1.svg"
-                alt="Dollar Sign"
+                alt="Dollar Sign Icon"
               />
             </div>
             <div class="card-content">
@@ -119,18 +140,18 @@
               <p>Fair market value for every note</p>
             </div>
           </div>
-          <div class="advantage-card">
+          <div class="advantage-card" data-aos="fade-up" data-aos-delay="200">
             <div class="card-icon">
-              <img src="./assets/images/img_deadline_1.svg" alt="Clock" />
+              <img src="./assets/images/img_deadline_1.svg" alt="Clock Icon" />
             </div>
             <div class="card-content">
               <h3>Fast Appraisals</h3>
               <p>Get an offer within 24 hours</p>
             </div>
           </div>
-          <div class="advantage-card">
+          <div class="advantage-card" data-aos="fade-up" data-aos-delay="300">
             <div class="card-icon">
-              <img src="./assets/images/img_shield_1.svg" alt="Shield" />
+              <img src="./assets/images/img_shield_1.svg" alt="Shield Icon" />
             </div>
             <div class="card-content">
               <h3>Safe & Easy Shipping</h3>
@@ -151,26 +172,26 @@
           <div class="process-dot"></div>
         </div>
         <div class="process-steps">
-          <div class="process-step">
+          <div class="process-step" data-aos="fade-up" data-aos-delay="100">
             <div class="step-number">01</div>
             <h3 class="step-title">Send Photos</h3>
             <p class="step-description">
               Upload clear images via<br />our form
             </p>
           </div>
-          <div class="process-step">
+          <div class="process-step" data-aos="fade-up" data-aos-delay="200">
             <div class="step-number">02</div>
             <h3 class="step-title">Get Offer</h3>
             <p class="step-description">We review and send an<br />estimate</p>
           </div>
-          <div class="process-step">
+          <div class="process-step" data-aos="fade-up" data-aos-delay="300">
             <div class="step-number">03</div>
             <h3 class="step-title">Ship or Meet</h3>
             <p class="step-description">
               Send with our insured label or meet locally
             </p>
           </div>
-          <div class="process-step">
+          <div class="process-step" data-aos="fade-up" data-aos-delay="400">
             <div class="step-number">04</div>
             <h3 class="step-title">Get Paid</h3>
             <p class="step-description">
@@ -191,8 +212,9 @@
                 <div class="expert-bg"></div>
                 <img
                   src="./assets/images/person.png"
-                  alt="Don Roberts"
+                  alt="Don Roberts - Currency Expert"
                   class="expert-image"
+                  loading="lazy"
                 />
               </div>
               <p class="expert-description" >
@@ -202,14 +224,14 @@
           </div>
           <div class="faq-section">
             <h3 class="faq-title">FAQ</h3>
-            <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-item" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
               <div class="faq-question">
                 <span class="faq-question-text"
                   >How do I send photos of my bills?</span
                 >
                 <img
                   src="./assets/images/img_frame_black_900.svg"
-                  alt="Arrow"
+                  alt="Expand FAQ"
                   class="faq-icon"
                 />
               </div>
@@ -217,14 +239,14 @@
                 Simply use our online form below to upload clear photos of both the front and back of your currency. We accept JPG and PNG formats.
               </div>
             </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-item" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
               <div class="faq-question">
                 <span class="faq-question-text"
                   >What types of notes do you buy?</span
                 >
                 <img
                   src="./assets/images/img_frame_black_900.svg"
-                  alt="Arrow"
+                  alt="Expand FAQ"
                   class="faq-icon"
                 />
               </div>
@@ -232,14 +254,14 @@
                 We buy all U.S. paper money including fancy serial numbers, rare notes, collections, original packs, and collectible currency from Colonial to Modern times.
               </div>
             </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-item" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
               <div class="faq-question">
                 <span class="faq-question-text"
                   >How much can I get for my note?</span
                 >
                 <img
                   src="./assets/images/img_frame_black_900.svg"
-                  alt="Arrow"
+                  alt="Expand FAQ"
                   class="faq-icon"
                 />
               </div>
@@ -247,14 +269,14 @@
                 The value depends on rarity, condition, and demand. We offer fair market value and provide free appraisals within 24 hours of receiving your photos.
               </div>
             </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-item" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
               <div class="faq-question">
                 <span class="faq-question-text"
                   >Can I sell entire collections?</span
                 >
                 <img
                   src="./assets/images/img_frame_black_900.svg"
-                  alt="Arrow"
+                  alt="Expand FAQ"
                   class="faq-icon"
                 />
               </div>
@@ -262,14 +284,14 @@
                 Absolutely! We specialize in buying entire collections, hoards, and estate currency. Large collections often receive premium pricing.
               </div>
             </div>
-            <div class="faq-item active" onclick="toggleFaq(this)">
+            <div class="faq-item active" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="true">
               <div class="faq-question">
                 <span class="faq-question-text"
                   >Is it safe to ship my notes?</span
                 >
                 <img
                   src="./assets/images/img_frame_black_900_20x20.svg"
-                  alt="Arrow"
+                  alt="Collapse FAQ"
                   class="faq-icon"
                 />
               </div>
@@ -287,8 +309,9 @@
         <div class="what-we-buy-content">
           <img
             src="./assets/images/img_rectangle_40.png"
-            alt="Paper Money"
+            alt="Collection of Paper Money"
             class="buy-image"
+            loading="lazy"
           />
           <div class="buy-content">
             <div class="buy-header">
@@ -300,7 +323,7 @@
                 <div class="buy-feature">
                   <img
                     src="./assets/images/img_1.png"
-                    alt="Check"
+                    alt="Check Mark"
                     class="feature-icon"
                   />
                   <span class="feature-text"
@@ -310,7 +333,7 @@
                 <div class="buy-feature">
                   <img
                     src="./assets/images/img_1.png"
-                    alt="Check"
+                    alt="Check Mark"
                     class="feature-icon"
                   />
                   <span class="feature-text"
@@ -320,7 +343,7 @@
                 <div class="buy-feature">
                   <img
                     src="./assets/images/img_1.png"
-                    alt="Check"
+                    alt="Check Mark"
                     class="feature-icon"
                   />
                   <span class="feature-text"
@@ -330,7 +353,7 @@
                           <div class="buy-feature">
                   <img
                     src="./assets/images/img_1.png"
-                    alt="Check"
+                    alt="Check Mark"
                     class="feature-icon"
                   />
                   <span class="feature-text"
@@ -343,7 +366,7 @@
              
               </div>
             </div>
-            <button class="get-offer-btn" onclick="scrollToContactForm()">Get a Free Cash Offer</button>
+            <button class="get-offer-btn" onclick="scrollToContactForm()" aria-label="Get a Free Cash Offer">Get a Free Cash Offer</button>
           </div>
         </div>
       </section>
@@ -353,64 +376,64 @@
         <div class="form-container">
           <div class="form-badge">Request a Offer</div>
           <h2 class="form-title">Request a Free Cash Offer</h2>
-          <form id="contact-form-element" class="form-grid">
+          <form id="contact-form-element" class="form-grid" novalidate>
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label"
+                <label class="form-label" for="full-name"
                   >Full Name<span class="required">*</span></label
                 >
-                <input type="text" name="from_name" class="form-input" required />
+                <input type="text" id="full-name" name="from_name" class="form-input" required />
               </div>
               <div class="form-group">
-                <label class="form-label"
+                <label class="form-label" for="email"
                   >Email Address<span class="required">*</span></label
                 >
-                <input type="email" name="reply_to" class="form-input" required />
+                <input type="email" id="email" name="reply_to" class="form-input" required />
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label"
+                <label class="form-label" for="phone"
                   >Phone Number<span class="required">*</span></label
                 >
-                <input type="tel" name="phone" class="form-input" required />
+                <input type="tel" id="phone" name="phone" class="form-input" required />
               </div>
               <div class="form-group">
-                <label class="form-label">Message</label>
-                <textarea name="message" class="form-input" rows="3"></textarea>
+                <label class="form-label" for="message">Message</label>
+                <textarea id="message" name="message" class="form-input" rows="3"></textarea>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label"
+                <label class="form-label" for="front-photos"
                   >Upload Front Photos<span class="required">*</span></label
                 >
                 <div class="file-upload">
                   <span>Upload Photos JPG/PNG</span>
                   <img
                     src="./assets/images/img_fi2956800.svg"
-                    alt="Upload"
+                    alt="Upload Icon"
                     class="upload-icon"
                   />
-                  <input type="file" name="front_photos" accept=".jpg,.jpeg,.png" multiple required />
+                  <input type="file" id="front-photos" name="front_photos" accept=".jpg,.jpeg,.png" multiple required />
                 </div>
               </div>
               <div class="form-group">
-                <label class="form-label"
+                <label class="form-label" for="back-photos"
                   >Upload Back Photos<span class="required">*</span></label
                 >
                 <div class="file-upload">
                   <span>Upload Photos JPG/PNG</span>
                   <img
                     src="./assets/images/img_fi2956800.svg"
-                    alt="Upload"
+                    alt="Upload Icon"
                     class="upload-icon"
                   />
-                  <input type="file" name="back_photos" accept=".jpg,.jpeg,.png" multiple required />
+                  <input type="file" id="back-photos" name="back_photos" accept=".jpg,.jpeg,.png" multiple required />
                 </div>
               </div>
             </div>
-            <button type="submit" class="submit-btn">Request My Offer</button>
+            <button type="submit" class="submit-btn" aria-label="Submit Request for Offer">Request My Offer</button>
           </form>
         </div>
       </section>
@@ -422,8 +445,9 @@
             <div class="footer-left">
               <img
                 src="./assets/images/img_footer_logo.png"
-                alt="Footer Logo"
+                alt="Buyer US Currency Footer Logo"
                 class="footer-logo"
+                loading="lazy"
               />
               <p class="footer-description">
                 Buyer US Currency is a U.S.-based private collector<br />
@@ -439,18 +463,18 @@
               <div class="footer-section">
                 <h3>Contact Information</h3>
                 <div class="footer-links">
-                  <a href="tel:307-221-3006" class="footer-link">
+                  <a href="tel:307-221-3006" class="footer-link" aria-label="Call us at 307-221-3006">
                     <img
                       src="./assets/images/img_fi_3059407.svg"
-                      alt="Phone"
+                      alt="Phone Icon"
                       class="footer-icon"
                     />
                     307-221-3006
                   </a>
-                  <a href="mailto:don@buyeruscurrency.com" class="footer-link">
+                  <a href="mailto:don@buyeruscurrency.com" class="footer-link" aria-label="Email us at don@buyeruscurrency.com">
                     <img
                       src="./assets/images/img_fi_481659.svg"
-                      alt="Email"
+                      alt="Email Icon"
                       class="footer-icon"
                     />
                     don@buyeruscurrency.com
@@ -473,6 +497,15 @@
     </div>
 
     <script>
+      // Loading Screen
+      window.addEventListener('load', function() {
+        const loadingScreen = document.getElementById('loading-screen');
+        loadingScreen.style.opacity = '0';
+        setTimeout(() => {
+          loadingScreen.style.display = 'none';
+        }, 500);
+      });
+
       // Initialize EmailJS
       (function() {
         emailjs.init({
@@ -488,33 +521,54 @@
 
       function toggleFaq(element) {
         const allFaqItems = document.querySelectorAll(".faq-item");
+        const isCurrentlyActive = element.classList.contains("active");
+        
         allFaqItems.forEach((item) => {
-          if (item !== element) {
-            item.classList.remove("active");
-          }
+          item.classList.remove("active");
+          item.setAttribute("aria-expanded", "false");
         });
-        element.classList.toggle("active");
+        
+        if (!isCurrentlyActive) {
+          element.classList.add("active");
+          element.setAttribute("aria-expanded", "true");
+        }
       }
 
-      // Form validation and submission with EmailJS
+      // Enhanced form validation and submission with EmailJS
       document.getElementById("contact-form-element").addEventListener("submit", function (e) {
         e.preventDefault();
         
         const requiredFields = this.querySelectorAll("input[required], textarea[required]");
         let isValid = true;
 
+        // Clear previous error states
+        requiredFields.forEach((field) => {
+          field.style.borderColor = "#e8e8e0";
+          field.classList.remove("error");
+        });
+
         // Validate required fields
         requiredFields.forEach((field) => {
           if (!field.value.trim()) {
-            field.style.borderColor = "#ff0000";
+            field.style.borderColor = "#e74c3c";
+            field.classList.add("error");
             isValid = false;
-          } else {
-            field.style.borderColor = "#dddddd";
           }
         });
 
+        // Validate email format
+        const emailField = this.querySelector('input[type="email"]');
+        if (emailField && emailField.value.trim()) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(emailField.value.trim())) {
+            emailField.style.borderColor = "#e74c3c";
+            emailField.classList.add("error");
+            isValid = false;
+          }
+        }
+
         if (!isValid) {
-          alert("Please fill in all required fields.");
+          alert("Please fill in all required fields correctly.");
           return false;
         }
 
@@ -558,7 +612,7 @@
           });
       });
 
-      // File upload handling
+      // Enhanced file upload handling
       document
         .querySelectorAll('.file-upload input[type="file"]')
         .forEach((input) => {
@@ -567,11 +621,50 @@
             const label = this.parentElement.querySelector("span");
             if (fileCount > 0) {
               label.textContent = `${fileCount} file(s) selected`;
+              this.parentElement.style.borderColor = "#c1a264";
             } else {
               label.textContent = "Upload Photos JPG/PNG";
+              this.parentElement.style.borderColor = "#c1a264";
             }
           });
         });
+
+      // Smooth scrolling for all internal links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Add scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+
+      // Observe elements for animation
+      document.querySelectorAll('.advantage-card, .process-step, .buy-feature').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+      });
     </script>
   </body>
 </html>
